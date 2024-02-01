@@ -11,15 +11,7 @@ const taskSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        default: 'pending'
-    },
-    date: {
-        type: Date,
-        required: true
-    },
-    time: {
-        type: String,
-        required: true
+        default: 'Todo'
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,

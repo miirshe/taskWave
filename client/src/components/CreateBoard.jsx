@@ -84,7 +84,7 @@ const CreateBoard = () => {
                         <label htmlFor="" className="text-base font-medium ml-1">Create Board</label>
                         <hr className='w-full mt-3' />
                         <Formik enableReinitialize initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
-                            <Form className='w-full space-y-5 p-4'>
+                            <Form className='w-full space-y-5 p-4 text-black'>
                                 <div className='w-full space-y-2'>
                                     <label htmlFor="" className="text-base font-medium ml-1">Title</label>
                                     <Field className="p-3 rounded border w-full outline-[#322F64]" type="text" placeholder='Enter board name eg. taskWave' name="title" />

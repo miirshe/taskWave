@@ -47,7 +47,7 @@ const Header = () => {
 
     }
     const userAccount = (
-        <div className='w-[75%] md:w-[40%] lg:w-[20%] absolute bg-white text-[#42526E] right-0 top-20 shadow rounded p-5'>
+        <div className='w-[75%] md:w-[40%] lg:w-[25%] absolute bg-white text-[#42526E] right-0 top-[4.5rem] shadow rounded p-5'>
             <div className='w-full ml-3'>
                 <h1>Account</h1>
                 <div className='w-full mt-5 space-y-4'>

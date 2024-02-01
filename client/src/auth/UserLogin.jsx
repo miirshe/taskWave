@@ -6,7 +6,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import * as Yup from 'yup';
 import { BiHide, BiShow } from "react-icons/bi";
 import { useLoginUserMutation } from '../redux/slices/UserSlices';
+import { useSelector } from 'react-redux';
 const userLogin = () => {
+  const boardColor = useSelector(state => state.boardColor.boardColor)
+  const textColor = useSelector(state => state.boardColor.textColor)
   const navigate = useNavigate();
   const [loginUser] = useLoginUserMutation();
   const [showPassword, setShowPassword] = useState('password');
@@ -34,11 +37,12 @@ const userLogin = () => {
       })
   }
   return (
-    <div className='w-full p-4 bg-white dark:bg-slate-800 dark:text-white'>
-      <div className='w-[90%] md:w-[40%] lg:w-[30%] p-4 shadow rounded mx-auto mt-[10%]'>
+    <div className='w-full p-4 dark:bg-slate-800 dark:text-white'
+    style={{ backgroundColor: boardColor, color: textColor }}>
+      <div className='w-[90%] md:w-[40%] lg:w-[30%] p-4 shadow rounded mx-auto mt-[10%] bg-white text-black'>
         <Formik onSubmit={handleSubmit} enableReinitialize
           initialValues={initialValues} validationSchema={validationSchema}>
-          <Form className='w-full space-y-6'>
+          <Form className='w-full space-y-6 '>
             <div className='w-full flex flex-row gap-3 justify-center'>
               <SiTask size={30} />
               <h1 className='text-base font-medium'>TaskWave</h1>
